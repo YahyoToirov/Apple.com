@@ -1,0 +1,697 @@
+/************\
+*** Global ***
+\************/
+:root {
+  --navbar-backgroud-color: rgba(0, 0, 0, 0.8);
+  --navbar-color: #f5f5f7;
+  --banner-background-color: #e34140;
+  --link-color: #2d97ff;
+  --heading-color: #1d1d1f;
+
+  --footer-background: #f5f5f7;
+  --footer-border-color: #d2d2d7;
+  --footer-text-color: #6e6e73;
+  --footer-link-color: #424245;
+  --footer-directory-title-color: #1d1d1f;
+  --footer-directory-title-color-hover: #000;
+
+  --product-height: 692px;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  line-height: 1.47059;
+  font-size: 106.25%;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+  overflow-x: hidden;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 44px;
+  min-width: 1024px;
+  background-color: var(--navbar-backgroud-color);
+  font-size: 17px;
+  z-index: 999;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* section {
+} */
+
+a {
+  color: inherit;
+  font-family: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style-type: none;
+}
+
+sup {
+  position: relative;
+  top: -0.5em;
+  font-size: 0.6em;
+  vertical-align: baseline;
+  line-height: 1.23536;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+  text-align: center;
+}
+
+footer {
+  margin-top: 12px;
+  font-size: 12px;
+  line-height: 1.33337;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  font-family: "SF Pro Text", "Myriad Set Pro", "SF Pro Icons",
+    "Apple Legacy Chevron", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  background: var(--footer-background);
+  color: var(--footer-text-color);
+  min-width: 1024px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+/************\
+*** Blocks ***
+\************/
+/* Header */
+/*** Navbar ***/
+.navbar-center {
+  display: inline-block;
+  max-width: 980px;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  height: 44px;
+  min-width: 980px;
+  transform: translateX(3px);
+}
+
+.nav-menu a {
+  text-decoration: none;
+}
+
+.nav-logo {
+  background-size: 14px 44px;
+  background-repeat: no-repeat;
+  background-image: url(https://www.apple.com/ac/globalnav/7/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_apple_image__b5er5ngrzxqq_large.svg);
+  background-position: center center;
+  width: 14px;
+}
+
+.nav-search {
+  background-size: 15px 88px;
+  background-repeat: no-repeat;
+  background-image: url(https://www.apple.com/ac/globalnav/7/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_search_image__cbllq1gkias2_large.svg);
+  background-position: center center;
+  width: 14px;
+  background-position: 0 0;
+}
+
+.nav-cart {
+  background-size: 14px 44px;
+  background-repeat: no-repeat;
+  background-image: url(https://www.apple.com/ac/globalnav/7/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_bag_image__yzte50i47ciu_large.svg);
+  background-position: center center;
+  width: 14px;
+}
+
+/*** Banner ***/
+.holiday-banner {
+  margin-top: 44px;
+  background-color: var(--banner-background-color);
+}
+
+.arrow-icon {
+  font-family: "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial",
+    sans-serif;
+  font-weight: 400;
+}
+
+/* Main */
+/*** General ***/
+.product-page {
+  position: relative;
+  height: var(--product-height);
+  grid-column: 1 / span 2;
+}
+
+.product-info {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  padding-top: 37px;
+}
+
+.product-info > * {
+  text-align: center;
+}
+
+.product-links {
+  position: relative;
+  margin-top: 9px;
+  color: var(--link-color);
+  display: inline-block;
+  font-size: 21px;
+  line-height: 1.381;
+  font-weight: 300;
+  letter-spacing: 0.011em;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+  margin-top: 0.65em;
+  z-index: 10;
+}
+
+.product-links a {
+  z-index: 10;
+}
+
+.img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.product-img {
+  margin: 0 25px;
+  width: 359px;
+  height: 348px;
+  background-size: 359px 348px;
+  background-repeat: no-repeat;
+}
+
+/*** Holiday Gifts ***/
+.holiday-logo {
+  height: 88px;
+  width: 70px;
+  background-size: 70px 88px;
+  background-repeat: no-repeat;
+  background-image: url(../assets/img/logo__dcojfwkzna2q_medium_2x.png);
+  margin: 0 auto;
+}
+
+/*** Watch ***/
+.new-label {
+  color: #bf4800;
+  font-size: 12px;
+  line-height: 1.33337;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.watch-logo {
+  height: 56px;
+  background-size: 146px 56px;
+  background-repeat: no-repeat;
+  background-image: url(../assets/img/tile_watch_logo_lte__h7snssb7mqq2_medium_2x.png);
+  background-position: center;
+  margin-bottom: 5px;
+}
+
+/* Footer */
+.footer-center {
+  margin: 0 auto;
+  max-width: 980px;
+}
+
+.footnotes {
+  border-bottom: 1px solid var(--footer-border-color);
+  padding: 17px 0 11px;
+}
+
+.footnotes > ul > li {
+  font-size: 12px;
+  line-height: 1.33337;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  padding-bottom: 0.8em;
+}
+
+.footer-nav {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: start;
+  position: initial;
+  height: initial;
+  min-width: 980px;
+  padding-top: 20px;
+  background-color: inherit;
+  font-size: 12px;
+  line-height: 1.33337;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.legal-copyright {
+  margin-right: 27px;
+}
+
+.legal-links {
+  display: inline-block;
+}
+
+.legal-links .legal-links__item:not(:last-child) {
+  border-right: 1px solid var(--footer-border-color);
+  margin-right: 7px;
+  padding-right: 10px;
+  display: inline-block;
+  margin-top: 5px;
+  white-space: nowrap;
+}
+
+.legal-country {
+  position: absolute;
+  right: 0;
+  top: 5px;
+}
+
+/**************\
+*** Elements ***
+\**************/
+
+/* Header */
+/*** Navbar ***/
+.nav-menu__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 29px;
+  padding: 0 8px;
+}
+
+.nav-menu__item a {
+  height: 100%;
+  width: 100%;
+  color: var(--navbar-color);
+  font-size: 12px;
+  vertical-align: middle;
+  text-decoration: none;
+  line-height: 3.66667;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  font-family: "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Helvetica Neue",
+    "Helvetica", "Arial", sans-serif;
+  opacity: 0.8;
+  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.nav-menu__item a:hover {
+  opacity: 1;
+}
+
+/*** Banner ***/
+.holiday-banner__content {
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  padding: 12px 0;
+}
+
+/* Main */
+/*** General ***/
+.product-page__link {
+  display: inline-block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+}
+.product-info__primary-title {
+  margin-top: 20px;
+  font-size: 56px;
+  line-height: 1.07143;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+  color: #1d1d1f;
+}
+.product-info__secondary-title {
+  font-size: 28px;
+  line-height: 1.10722;
+  font-weight: 300;
+  letter-spacing: 0.004em;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+  margin-top: 6px;
+  color: #1d1d1f;
+}
+
+/* Footer */
+.footer-nav__column h5:not(:first-child) {
+  padding-top: 16px;
+}
+
+.footer-nav__heading {
+  font-size: 12px;
+  line-height: 1.33337;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  font-family: "SF Pro Text", "Myriad Set Pro", "SF Pro Icons",
+    "Apple Legacy Chevron", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-weight: 600;
+  margin-right: 20px;
+  margin-bottom: 0.8em;
+  color: var(--footer-directory-title-color);
+}
+
+.footer-nav__list-item {
+  margin-bottom: 0.8em;
+}
+
+.footer-nav__list-item a:hover {
+  text-decoration: underline;
+}
+
+.footer__shop {
+  margin-bottom: 4px;
+  padding-top: 26px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--footer-border-color);
+  letter-spacing: 0;
+}
+
+.footer__shop a {
+  color: var(--link-color);
+}
+
+.footer__legal {
+  position: relative;
+  padding-bottom: 29px;
+  letter-spacing: normal;
+}
+
+.legal-links__item {
+  display: inline-block;
+}
+
+/***************\
+*** Modifiers ***
+\***************/
+
+/* Navbar */
+/* Main */
+/*** General ***/
+.product-link--buy {
+  margin-left: 35px;
+}
+
+.product-page--small-left,
+.product-page--small-right {
+  grid-column: initial;
+  height: 580px;
+}
+
+.product-page--small-left {
+  margin-left: 12px;
+}
+
+.product-page--small-right {
+  margin-right: 12px;
+}
+
+.product-page--small-left .product-info__primary-title,
+.product-page--small-right .product-info__primary-title {
+  margin-top: 16px;
+  font-size: 40px;
+  line-height: 1.1;
+  font-weight: 500;
+  letter-spacing: 0em;
+}
+
+.product-page--small-left .product-info__secondary-title,
+.product-page--small-right .product-info__secondary-title {
+  font-size: 22px;
+  line-height: 1.2381;
+  font-weight: 300;
+  letter-spacing: 0.016em;
+}
+
+.product-page--small-left .product-links,
+.product-page--small-right .product-links {
+  font-size: 18px;
+  line-height: 1.23536;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+}
+
+.product-page--small-left .img-wrapper,
+.product-page--small-right .img-wrapper {
+  background-color: #fcfbfd;
+}
+
+/*** Holiday Gifts ***/
+.product-page--holiday {
+  background-color: #eaf2fc;
+}
+
+.img-wrapper--holiday {
+  height: calc(100% - 246.39px);
+  position: initial;
+}
+
+.img-wrapper--holiday .product-img {
+  animation: rotate 4s 0.125s ease-in-out forwards;
+}
+
+.product-page--holiday .product-img--iphone13 {
+  background-image: url(../assets/img/iphone__cyamwsdph26a_medium_2x.png);
+}
+
+.product-page--holiday .product-img--airpods {
+  background-image: url(../assets/img/airpods__b0941p5gmwj6_medium_2x.png);
+}
+
+.product-page--holiday .product-img--ipad {
+  background-image: url(../assets/img/ipad__bq6djchifrbm_medium_2x.png);
+}
+
+/*** iPhone 13 Pro ***/
+.img-wrapper--iphone-13-pro {
+  background-color: #fcfbfd;
+}
+
+.product-img--iphone-13-pro {
+  background-image: url(../assets/img/image\ copy.png);
+  width: 1370px;
+  height: 100%;
+  background-size: 1370px 736px;
+  background-repeat: no-repeat;
+  background-position-y: 3vh;
+  transform: scale(1.09, 1.17);
+  color: white;
+}
+
+/*** iPhone 13 ***/
+.img-wrapper--iphone-13 {
+  background-color: #35283b;
+}
+
+.product-img--iphone-13 {
+  background-image: url(../assets/img/hero_iphone_13__f194u1rdooeq_medium_2x.jpg);
+  width: 1370px;
+  height: 100%;
+  background-size: 1370px 736px;
+  background-repeat: no-repeat;
+  background-position-y: -60px;
+  background-position-x: -40px;
+  transform: scaleY(1.05);
+}
+
+.product-page--iphone-13 .product-info__primary-title {
+  color: var(--navbar-color);
+}
+
+.product-page--iphone-13 .product-info__secondary-title {
+  color: #fcc2eb;
+}
+
+/*** MacBook Pro ***/
+.product-img--macbook-pro {
+  width: 1262px;
+  height: 580px;
+  background-image: url(../assets/img/tile_macbookpro__cx0ur0qg9biq_medium_2x.jpg);
+  background-repeat: no-repeat;
+  background-size: 732px 696px;
+  background-position: center;
+  transform: scale(1.1) translateY(-26px);
+  margin: 0;
+}
+
+/*** Watch ***/
+.product-page--watch .product-info {
+  padding-top: 31px;
+}
+
+.product-page--watch .product-info__primary-title {
+  margin-top: 8px;
+}
+
+.product-page--small-right .img-wrapper--watch {
+  background-color: #f5f5f7;
+}
+
+.product-img--watch {
+  background-image: url(../assets/img/tile_watch__e9n11b6m6yq2_medium_2x.jpg);
+  background-repeat: no-repeat;
+  transform: scale(1.85) translateY(-11px);
+  margin: 0;
+}
+
+/*** HomePod ***/
+.product-img--homepod {
+  width: 1262px;
+  height: 580px;
+  background-image: url(../assets/img/tile_homepod_mini__b73w4z3ljymu_medium_2x.jpg);
+  background-size: 1262px 580px;
+  background-repeat: no-repeat;
+  background-size: 732px 696px;
+  background-position: center;
+  transform: scale(1.33) translateY(-16px);
+  margin: 0;
+}
+
+/*** Arcade ***/
+.product-page--arcade .arcade-logo {
+  height: 34px;
+  background-repeat: no-repeat;
+  background-image: url(../assets/img/logo__dcojfwkzna2q_large.png);
+  background-position: center;
+  margin-bottom: 5px;
+  margin-top: 20px;
+}
+
+.product-img--arcade {
+  width: 1262px;
+  height: 580px;
+  background-size: 1262px 580px;
+  background-repeat: no-repeat;
+  background-image: url(../assets/img/tile_lego_castaways__d2v36ez91ewm_large.jpeg);
+  background-position: center;
+}
+
+/*** Card ***/
+.product-page--card .card-logo {
+  margin-bottom: 5px;
+  margin-top: 20px;
+  height: 35px;
+  background-size: 125px 35px;
+  background-repeat: no-repeat;
+  background-image: url(../assets/img/card_logo__dcojfwkzna2q_medium.png);
+  background-position: center;
+  transform: scale(1.05) translateY(-1px);
+}
+
+.product-img--card {
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/img/tile__cauwwcyyn9hy_medium_2x.jpg);
+  background-size: 682px 650px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  transform: scale(0.94) translateY(21px);
+}
+
+/*** tv ***/
+.product-page--tv .tv-logo {
+  margin-bottom: 5px;
+  margin-top: 59px;
+  height: 35px;
+  background-repeat: no-repeat;
+  background-image: url(../assets/img/logo_light__cfvl40z2nzau_large.png);
+  background-position: center;
+  transform: scale(1.05) translateY(-1px);
+  z-index: 0;
+}
+
+.product-page--tv .product-info__content {
+  /* position: absolute; */
+  bottom: 0;
+  width: 100%;
+  /* margin-bottom: 37px; */
+  margin-top: 286px;
+  text-align: center;
+}
+
+.product-img--tv {
+  margin: 0;
+  width: 1262px;
+  height: 580px;
+  background-size: 1262px 580px;
+  background-image: url(../assets/img/promo_dickinson__c9ea4l2f5rki_medium_2x.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.product-page--tv .dickinson-logo {
+  width: 257px;
+  height: 127px;
+  margin: auto;
+  background-image: url(../assets/img/logo_dickinson_title__exfqr7iiyc8y_large.png);
+  background-repeat: no-repeat;
+  background-size: 257px 127px;
+  background-position: center;
+}
+
+.product-page--tv .product-links {
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.23536;
+  font-weight: 300;
+  letter-spacing: -0.022em;
+  font-family: "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Helvetica Neue",
+    "Helvetica", "Arial", sans-serif;
+}
+.hero--with--bg {
+  background-image: url(../assets/img/image.png);
+  background-position: center;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  font-weight: 500;
+  color: white;
+  font-size: 55px;
+}
+
+/* Footer */
